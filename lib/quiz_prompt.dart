@@ -10,13 +10,13 @@ class QuizPrompt extends StatefulWidget {
 class _QuizPromptState extends State<QuizPrompt> {
   @override
   Widget build(BuildContext context) {
-    return TextButton(
+    return OutlinedButton.icon(
         onPressed: () {},
-        style: TextButton.styleFrom(
-            foregroundColor: Colors.white,
-            padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
-            textStyle:
-                const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
-        child: const Text("Start Quiz"));
+        style: OutlinedButton.styleFrom(
+          foregroundColor: Colors.white,
+          // textStyle: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+        ),
+        icon: const Icon(Icons.arrow_right_alt),
+        label: const Text("Start Quiz"));
   }
 }

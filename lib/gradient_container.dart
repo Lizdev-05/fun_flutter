@@ -16,15 +16,28 @@ class GradientContainer extends StatelessWidget {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight),
       ),
-      child: Column(children: [
-        Image.asset("assets/images/quiz-logo.png"),
-        const Text(
-          "Learn Flutter The Fun Way",
-          style: TextStyle(
-              color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold),
-        ),
-        const QuizPrompt()
-      ]),
+      child: Center(
+        child: Column(
+            mainAxisSize: MainAxisSize.min,
+
+            // crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset(
+                "assets/images/quiz-logo.png",
+                width: 300,
+              ),
+              const SizedBox(height: 80),
+              const Text(
+                "Learn Flutter The Fun Way",
+                style: TextStyle(
+                    color: Color.fromARGB(255, 188, 222, 250),
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 40),
+              const QuizPrompt()
+            ]),
+      ),
     );
   }
 }
