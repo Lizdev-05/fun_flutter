@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fun_flutter/splash.dart';
+import 'package:fun_flutter/quiz.dart';
 
 void main() {
-  runApp(const Splash());
+  runApp(const Quiz());
 }
