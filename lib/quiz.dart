@@ -36,9 +36,9 @@ class _QuizState extends State<Quiz> {
   Widget build(BuildContext context) {
     //Third way of rendenring statement consitionally
     // Widget screenWidget = StartScreen(switchScreen);
-    Widget screenWidget = QuestionsScreen();
+    Widget screenWidget = const QuestionsScreen();
     if (activeScreen == "questions-screen") {
-      screenWidget = QuestionsScreen();
+      screenWidget = const QuestionsScreen();
     }
 
     return MaterialApp(
