@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:fun_flutter/quiz_prompt.dart';
+// import 'package:fun_flutter/quiz_prompt.dart';
 
 class StartScreen extends StatelessWidget {
-  const StartScreen({super.key});
+  const StartScreen(this.startQuiz, {super.key});
   // const StartScreen(this.color1, this.color2, {super.key});
 
   // final Color color1;
   // final Color color2;
+
+  final void Function() startQuiz;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,17 @@ class StartScreen extends StatelessWidget {
                   fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 40),
-            const QuizPrompt()
+            OutlinedButton.icon(
+              onPressed: () {
+                startQuiz();
+              },
+              style: OutlinedButton.styleFrom(
+                foregroundColor: Colors.white,
+                // textStyle: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              ),
+              icon: const Icon(Icons.arrow_right_alt),
+              label: const Text("Start Quiz"),
+            ),
           ]),
     );
   }
